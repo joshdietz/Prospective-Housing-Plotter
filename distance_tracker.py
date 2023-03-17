@@ -1,6 +1,7 @@
 import requests
 import json
 import io
+import os
 import sys
 import numpy as np
 import urllib
@@ -8,10 +9,12 @@ import base64
 import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
+import dotenv
 
+dotenv.load_dotenv()
 matplotlib.use('agg')
 
-GOOGLE_MAPS_API_KEY = 'AIzaSyBSIV4K47UWZaS2CmoRGtwIAZFlW1gHg7o'
+GOOGLE_MAPS_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY')
 
 def create_maps_link(to_address: str, from_address: str):
     # create a google maps link to the address
@@ -29,6 +32,7 @@ def get_travel_time(to_address: str, from_address: str, time: str = "2023-05-14T
         travel_time = data['rows'][0]['elements'][0]['duration']['text']
         travel_distance = data['rows'][0]['elements'][0]['distance']['text']
     except:
+        print(data)
         travel_time = 'N/A'
         travel_distance = 'N/A'
 
