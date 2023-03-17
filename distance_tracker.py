@@ -14,7 +14,7 @@ import dotenv
 dotenv.load_dotenv()
 matplotlib.use('agg')
 
-GOOGLE_MAPS_API_KEY = os.getenv('GOOGLE_MAPS_API_KEY')
+GOOGLE_MAPS_API_KEY = os.getenv('API_KEY')
 
 def create_maps_link(to_address: str, from_address: str):
     # create a google maps link to the address
