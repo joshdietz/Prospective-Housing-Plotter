@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    opacity: 0.8;
+    margin-top: 10px;
+    align-content: center;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .card-body{
+    align-content: center;
+  }
+  @media only screen and (max-width: 1000px) {
+    body {
+       font-size: calc(12px + 12 * ((100vw - 320px) / 1600));
+       //this is a simple css calculation that will gradually adjust the font-size as the 
+       //screen width changes between two points
+ }
+ @media only screen and (max-width: 320px) {
+    body {
+       font-size: 12px;
+    }
+ }
