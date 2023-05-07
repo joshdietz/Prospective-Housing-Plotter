@@ -1,6 +1,6 @@
 # Prospective Housing Plotter with Google Maps Integration
 
-This Flask-based web app allows users to enter an address and view prospective housing options in relation to up to four roommates. The app utilizes the Google Maps API to retrieve location data and plot the property on a map.
+This Flask-based web app allows users to enter an address and view prospective housing options in relation to up to the work addresses of all the roommates. The app utilizes the Google Maps API to retrieve location data and plot the property on a map.
 
 ## Installation
 
